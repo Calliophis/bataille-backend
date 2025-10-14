@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "scores": [
+      {
+        "playerId": 1,
+        "score": 10
+      },
+      {
+        "playerId": 2,
+        "score": 20
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "scores": [
+      {
+        "playerId": 1,
+        "score": 15
+      },
+      {
+        "playerId": 2,
+        "score": 5
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "scores": [
+      {
+        "playerId": 1,
+        "score": 20
+      },
+      {
+        "playerId": 2,
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "scores": [
+      {
+        "playerId": 1,
+        "score": 12
+      },
+      {
+        "playerId": 2,
+        "score": 14
+      }
+    ]
+  }
+]
