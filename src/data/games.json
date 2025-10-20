@@ -37,18 +37,5 @@
         "score": 0
       }
     ]
-  },
-  {
-    "id": 4,
-    "scores": [
-      {
-        "playerId": 1,
-        "score": 12
-      },
-      {
-        "playerId": 2,
-        "score": 14
-      }
-    ]
   }
 ]

@@ -12,7 +12,7 @@ export class PlayerController {
     }
 
     @Post()
-    addPlayer(@Body() playerName: string): Player {
+    addPlayer(@Body('playerName') playerName: string): Player {
         return this.playerService.addPlayer(playerName);
     }
 }
