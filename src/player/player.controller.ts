@@ -4,15 +4,15 @@ import type { Player } from './player.model';
 
 @Controller('players')
 export class PlayerController {
-    constructor(private readonly playerService: PlayerService) {}
+  constructor(private readonly playerService: PlayerService) {}
 
-    @Get()
-    getPlayers(): Player[] {
-        return this.playerService.findAll();
-    }
+  @Get()
+  getPlayers(): Player[] {
+    return this.playerService.findAll();
+  }
 
-    @Post()
-    addPlayer(@Body('playerName') playerName: string): Player {
-        return this.playerService.addPlayer(playerName);
-    }
+  @Post()
+  addPlayer(@Body('playerName') playerName: string): Player {
+    return this.playerService.addPlayer(playerName);
+  }
 }

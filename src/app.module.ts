@@ -11,10 +11,10 @@ import { ConfigModule } from '@nestjs/config';
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: '.env',
-    }), 
-    GameModule, 
-    PlayerModule, 
-    AuthModule
+    }),
+    GameModule,
+    PlayerModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -5,37 +5,36 @@ import { readFileSync, writeFileSync } from 'fs';
 
 @Injectable()
 export class GameService {
-    private filePath: string;
+  private filePath: string;
 
-    constructor() {
-        this.filePath = join(process.cwd(), 'src/data/games.json');  
-    }
-     
+  constructor() {
+    this.filePath = join(process.cwd(), 'src/data/games.json');
+  }
 
-    private readGames(): Game[] {
-        const data = readFileSync(this.filePath, 'utf-8');
-        return JSON.parse(data);
-    }
+  private readGames(): Game[] {
+    const data = readFileSync(this.filePath, 'utf-8');
+    return JSON.parse(data) as Game[];
+  }
 
-    private writeGames(games: Game[]): void {
-        writeFileSync(this.filePath, JSON.stringify(games, null, 2));
-    }
+  private writeGames(games: Game[]): void {
+    writeFileSync(this.filePath, JSON.stringify(games, null, 2));
+  }
 
-    findAll(): Game[] {
-        return this.readGames();
-    }
+  findAll(): Game[] {
+    return this.readGames();
+  }
 
-    generateId(): number {
-        return this.readGames().length + 1;
-    }
+  generateId(): number {
+    return this.readGames().length + 1;
+  }
 
-    addGame(gameScore: Score[]): Game {
-        const games = this.readGames();
-        const newId = this.generateId();
-        const newGame = { id: newId, scores: gameScore };
+  addGame(gameScore: Score[]): Game {
+    const games = this.readGames();
+    const newId = this.generateId();
+    const newGame = { id: newId, scores: gameScore };
 
-        games.push(newGame);
-        this.writeGames(games);
-        return newGame;
-    }
+    games.push(newGame);
+    this.writeGames(games);
+    return newGame;
+  }
 }

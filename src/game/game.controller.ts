@@ -4,15 +4,15 @@ import type { Game, Score } from './game.model';
 
 @Controller('games')
 export class GameController {
-    constructor(private readonly gameService: GameService) {}
+  constructor(private readonly gameService: GameService) {}
 
-    @Get()
-    getGames(): Game[] {
-        return this.gameService.findAll();
-    }
-    
-    @Post()
-    addGame(@Body() gameScore: Score[]): Game {
-        return this.gameService.addGame(gameScore);
-    }
+  @Get()
+  getGames(): Game[] {
+    return this.gameService.findAll();
+  }
+
+  @Post()
+  addGame(@Body() gameScore: Score[]): Game {
+    return this.gameService.addGame(gameScore);
+  }
 }
