@@ -23,6 +23,32 @@
 
 ## Description
 
+**FRENCH**
+Développement d'un backend très simple pour le jeu de Bataille.
+
+- Accès à l'API avec un token non sécurisé envoyé par le frontend.
+
+- Ecriture dans deux bases de données sous forme de fichiers json. 
+-- players.json stocke les informations des joueurs (id et nom).
+--- Permet de récupérer les joueurs existants et créer un nouveau joueur.
+-- games.json stocke les informations concernant les parties déjà jouées (id et scores).
+--- Permet de récupérer les parties précédentes et de créer une nouvelle partie.
+
+Pour le frontend, développé en Angular, voir `https://github.com/Calliophis/bataille`
+
+**ENGLISH**
+Development of a very simple backend for the card game.
+
+- API access secured with a non-encrypted token sent by the frontend.
+
+- Data is stored in two JSON file-based databases:
+-- players.json stores player information (ID and name).
+--- Allows retrieving existing players and creating a new one.
+-- games.json stores information about previously played games (ID and scores).
+--- Allows retrieving past games and creating a new one.
+
+For the frontend, developed in Angular, see `https://github.com/Calliophis/bataille`
+
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Project setup
