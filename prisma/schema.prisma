@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model game_scores {
+  game_id   Int
+  player_id Int
+  score     Int
+  games     games   @relation(fields: [game_id], references: [id], onDelete: Cascade)
+  players   players @relation(fields: [player_id], references: [id], onDelete: Cascade)
+
+  @@id([game_id, player_id])
+}
+
+model games {
+  id          Int           @id @unique @default(autoincrement())
+  game_scores game_scores[]
+}
+
+model players {
+  id          Int           @id @unique @default(autoincrement())
+  name        String        @unique @default("")
+  game_scores game_scores[]
+}

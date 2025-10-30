@@ -24,15 +24,19 @@
 ## Description
 
 **FRENCH**
+
 Développement d'un backend très simple pour le jeu de Bataille.
 
 - Accès à l'API avec un token non sécurisé envoyé par le frontend.
 
-- Ecriture dans deux bases de données sous forme de fichiers json. 
--- players.json stocke les informations des joueurs (id et nom).
+- Base de données PostgreSQL hébergée sur Supabase 
+-- une table players stocke les informations des joueurs
 --- Permet de récupérer les joueurs existants et créer un nouveau joueur.
--- games.json stocke les informations concernant les parties déjà jouées (id et scores).
---- Permet de récupérer les parties précédentes et de créer une nouvelle partie.
+-- une table games stocke les index des parties jouées
+-- une table scores stocke les scores de chaque joueur à chaque partie jouée
+--- Permettent de récupérer les parties précédentes et d'ajouter une nouvelle partie à l'historique.
+
+- Prisma est utilisé comme ORM entre NestJS et PostgreSQL
 
 Pour le frontend, développé en Angular, voir `https://github.com/Calliophis/bataille`
 
@@ -41,11 +45,14 @@ Development of a very simple backend for the card game.
 
 - API access secured with a non-encrypted token sent by the frontend.
 
-- Data is stored in two JSON file-based databases:
--- players.json stores player information (ID and name).
+- PostgreSQL database hosted on Supabase 
+-- players table stores player information (ID and name).
 --- Allows retrieving existing players and creating a new one.
--- games.json stores information about previously played games (ID and scores).
---- Allows retrieving past games and creating a new one.
+-- games table stores the id of previously played games.
+-- scores table stores the score of each player for each game played
+--- Allow retrieving past games and adding a new one to the history.
+
+- Prisma is used as an ORM between NestJS and Supabase
 
 For the frontend, developed in Angular, see `https://github.com/Calliophis/bataille`
 

@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { GameModule } from './game/game.module';
-import { PlayerModule } from './player/player.module';
-import { AuthModule } from './auth/auth.module';
+import { GameModule } from './domain/game/game.module';
+import { PlayerModule } from './domain/player/player.module';
+import { AuthModule } from './domain/auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
