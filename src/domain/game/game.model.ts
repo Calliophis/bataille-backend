@@ -1,7 +1,5 @@
-import { UUID } from 'crypto';
-
 export interface Score {
-  playerId: UUID;
+  playerId: number;
   score: number;
 }
 

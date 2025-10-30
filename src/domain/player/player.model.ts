@@ -1,6 +1,4 @@
-import { UUID } from 'crypto';
-
 export interface Player {
-  id: UUID;
+  id: number;
   name: string;
 }
