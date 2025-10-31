@@ -1,8 +1,10 @@
+import { Prisma } from '@prisma/client';
 import { Score } from '../../domain/game/game.model';
-import { DatabaseScore } from './score.factory';
 
 export abstract class DatabaseScoreFactory {
-  static createfromScores(scores: Score[]): Partial<DatabaseScore>[] {
+  static createfromScores(
+    scores: Score[],
+  ): Prisma.game_scoresCreateManyGamesInput[] {
     return scores.map((score) => ({
       player_id: score.playerId,
       score: score.score,
