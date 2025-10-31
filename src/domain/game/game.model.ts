@@ -1,9 +1,13 @@
-export interface Score {
-  playerId: number;
-  score: number;
+export class Score {
+  constructor(
+    public playerId: number,
+    public score: number,
+  ) {}
 }
 
-export interface Game {
-  id: number;
-  scores: Score[];
+export class Game {
+  constructor(
+    public id: number,
+    public scores: Score[],
+  ) {}
 }
