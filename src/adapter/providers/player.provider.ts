@@ -24,4 +24,10 @@ export class PlayerProvider implements PlayerProviderI {
       }),
     ).pipe(map((player) => PlayerFactory.createFromDatabase(player)));
   }
+
+  deletePlayer(id: number): Observable<boolean> {
+    return from(this.prisma.players.delete({ where: { id } })).pipe(
+      map(() => true),
+    );
+  }
 }
